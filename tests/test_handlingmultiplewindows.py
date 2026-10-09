@@ -12,6 +12,7 @@ def test_multiple_window():
         page.goto("https://demo.automationtesting.in/Windows.html")
         
         page.get_by_role("link", name="Open Seperate Multiple Windows").click()
+        page.wait_for_timeout(3000)
         page.get_by_role("button", name="click").click()
         page.wait_for_timeout(3000)
         #Get all pages opened
